@@ -37,14 +37,14 @@ int main()
   int key = 0;
   Mat frame;
   int framecount=0;
-  double t = NULL;
+  double t;
   VideoWriter inputWrite;
-  inputWrite.open("input.avi",CV_FOURCC('x','2','6','4'),24,Size(640,360),0);
+  inputWrite.open("input.avi",0,24,Size(640,360),0);
   if(!inputWrite.isOpened()){
 	  std::cout<<"write not opened"<<endl<<endl;
   }
   VideoWriter outputWrite;
-  outputWrite.open("output.avi",CV_FOURCC('x','2','6','4'),24,Size(640,360),0);
+  outputWrite.open("output.avi",0,24,Size(640,360),0);
   if(!outputWrite.isOpened()){
 	  std::cout<<"write not opened"<<endl<<endl;
   }
