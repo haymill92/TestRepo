@@ -30,7 +30,7 @@ int main()
   //MOG2 mask
   Mat fgMaskMOG2;
   Ptr<BackgroundSubtractor> pMOG2;
-    pMOG2 = createBackgroundSubtractorMOG2(500,12,false);
+  pMOG2 = new BackgroundSubtractorMOG2(500,12,false);
 
   std::cout << "Press 'q' to quit..." << std::endl;
   int FrameCount = 0;
@@ -60,7 +60,7 @@ int main()
   while(key != 'q')
   {
     cv::Mat img_mask;
-    pMOG2->apply(current_frame, fgMaskMOG2);
+    pMOG2->operator()(current_frame, fgMaskMOG2);
 	if(!fgMaskMOG2.empty())
     {
 		outputWrite << fgMaskMOG2;
