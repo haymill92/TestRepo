@@ -30,6 +30,7 @@ int main()
   //MOG2 mask
   Mat fgMaskMOG2;
   Ptr<BackgroundSubtractor> pMOG2;
+    pMOG2 = createBackgroundSubtractorMOG2(500,12,false);
 
   std::cout << "Press 'q' to quit..." << std::endl;
   int FrameCount = 0;
@@ -52,7 +53,7 @@ int main()
 
   Mat previous_frame, current_frame, next_frame;
 
-  pMOG2 = createBackgroundSubtractorMOG2(500,12,false);
+
   
   capture.read(current_frame);
 
