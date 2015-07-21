@@ -68,6 +68,7 @@ int main()
 	inputWrite<<current_frame;
 	FrameCount++;
 	if(FrameCount<300){
+		capture.read(current_frame);
 		key=waitKey(1);
 	}
 	else{
