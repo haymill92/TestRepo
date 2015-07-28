@@ -39,12 +39,12 @@ int main()
   int framecount=0;
   double t;
   VideoWriter inputWrite;
-  inputWrite.open("input.avi",capture.get(CV_CAP_PROP_FOURCC),24,Size(640,360),0);
+  inputWrite.open("input.avi",cv.CV_FOURCC('X','2','6','4'),24,Size(640,360),0);
   if(!inputWrite.isOpened()){
 	  std::cout<<"write not opened"<<endl<<endl;
   }
   VideoWriter outputWrite;
-  outputWrite.open("output.avi",capture.get(CV_CAP_PROP_FOURCC),24,Size(640,360),0);
+  outputWrite.open("output.avi",cv.CV_FOURCC('X','2','6','4'),24,Size(640,360),0);
   if(!outputWrite.isOpened()){
 	  std::cout<<"write not opened"<<endl<<endl;
   }
